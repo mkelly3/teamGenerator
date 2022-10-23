@@ -7,7 +7,7 @@ describe('Manager',() =>{
             expect(newManager.name).toEqual('alex');
             expect(newManager.id).toEqual('20');
             expect(newManager.email).toEqual('test@gmail.com');
-            expect(newManager.school).toEqual('200')
+            expect(newManager.officeNumber).toEqual('200')
         });
         it("should be able to get the managers office numbrer from the getOfficeNumber() method",() =>{
             expect(newManager.getOfficeNumber()).toEqual('200');

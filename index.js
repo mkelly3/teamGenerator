@@ -1,12 +1,20 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
+const util = require('util')
 const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
-const html = require('./src/html');
+const teamhtml = require('./src/html');
+
 
 //empty array for all of the team members
 const staffMembers = [];
+
+const makeMyTeam = () =>{
+    //const stringStaff = JSON.stringify(staffMembers)
+    //console.log(stringStaff);
+    fs.writeFileSync("index.html",teamhtml(staffMembers),"utf-8")
+}
 
 const managerQuestions = [
     {
@@ -58,13 +66,14 @@ const addTeamMember = () => {
                     addIntern();
                     break;
                 default:
-                    buildHTMLTeam();
+                    makeMyTeam();
+                    console.log("hey");
                     break;
             }
         })
 }
 
-getManagerInfo();
+
 
 const addEngineer = () => {
     return inquirer.prompt([
@@ -94,6 +103,7 @@ const addEngineer = () => {
         const engineer = new Engineer(engineerResponse.name, engineerResponse.id,engineerResponse.email, engineerResponse.gitHubUser);
         staffMembers.push(engineer);
         console.log(staffMembers);
+        addTeamMember();
     });
 }
 
@@ -123,9 +133,12 @@ const addIntern = () => {
 
     ])
     .then((internAnswer) =>{
-        const intern = new Engineer(internAnswer.name, internAnswer.id,internAnswer.email, internAnswer.school);
+        const intern = new Intern (internAnswer.name, internAnswer.id,internAnswer.email, internAnswer.school);
         staffMembers.push(intern);
         console.log(staffMembers);
+        //calling addTeamMember so the manager can add more people 
+        addTeamMember();
     });
 }
 
+getManagerInfo();

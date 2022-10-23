@@ -14,6 +14,7 @@ const generateHTML = (data) => {
             </ul>
         </div>
     </div>
+    <br/>
         `;
     };
 
@@ -31,7 +32,8 @@ const generateHTML = (data) => {
                 <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineer.getGitHub()}</a></li>
             </ul>
         </div>
-    </div> `;
+    </div>
+    <br/> `;
     };
 
     const getIntern = (intern) => {
@@ -43,12 +45,13 @@ const generateHTML = (data) => {
         </div>
         <div class="card-body">
             <ul class="list-group">
-                <li class="list-group-item">ID: ${intern.getId()}}</li>
+                <li class="list-group-item">ID: ${intern.getId()}</li>
                 <li class="list-group-item">Email: <a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></li>
                 <li class="list-group-item">School: ${intern.getSchool()}</li>
             </ul>
         </div>
     </div>
+    <br/>
     `;
     };
 
@@ -93,7 +96,7 @@ module.exports = (data) => {
         <div class="container-fluid">
             <div class="row">
                 <div class="col-12 jumbotron mb-3 team-heading bg-info">
-                    <h1 class="text-center">My Team</h1>
+                    <h1 class="text-center text-white">My Team</h1>
                 </div>
             </div>
         </div>
@@ -101,7 +104,9 @@ module.exports = (data) => {
         <div class="container">
             <div class="row">
                 <div class="team-area col-12 d-flex justify-content-center">
+                <br/>
                 ${generateHTML(data)}
+                <br/>
             </div>
         </div>
     </div>

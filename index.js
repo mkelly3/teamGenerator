@@ -84,7 +84,7 @@ const addEngineer = () => {
     },
     {
         type:'input',
-        name:'Id',
+        name:'id',
         message: "Enter Engineer's ID?"
     },
     {
@@ -117,7 +117,7 @@ const addIntern = () => {
     },
     {
         type:'input',
-        name:'Id',
+        name:'id',
         message: "Enter Interns's ID?"
     },
     {

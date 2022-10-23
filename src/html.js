@@ -1,5 +1,3 @@
-function team(data){
-    console.log(data)
-}
 
-module.exports = team;
+
+const generateHTML = (data) => {}

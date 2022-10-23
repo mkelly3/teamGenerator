@@ -5,15 +5,23 @@ const Manager = require('./lib/Manager');
 const Engineer = require('./lib/Engineer');
 const Intern = require('./lib/Intern');
 const teamhtml = require('./src/html');
+const writeFileAsync = util.promisify(fs.writeFile);
 
 
 //empty array for all of the team members
-const staffMembers = [];
+let staffMembers = [];
+var teamString = "";
 
 const makeMyTeam = () =>{
     //const stringStaff = JSON.stringify(staffMembers)
     //console.log(stringStaff);
-    fs.writeFileSync("index.html",teamhtml(staffMembers),"utf-8")
+    for (let i = 0; i < staffMembers.length; i++) {
+        teamString = teamString + teamhtml.generateHTML(staffMembers[i]);
+    }
+
+    let finalHtml = teamhtml.generateHTML(teamString);
+
+    writeFileAsync('./dist/index.html',finalHtml);
 }
 
 const managerQuestions = [

@@ -14,6 +14,10 @@ This application has the user enter information into the command line to generat
 ## Video Link
 [Video Link](https://drive.google.com/file/d/1Cq5U2JknX4l0hzVb6iqCfUadCCv3wmkf/view)
 
+## HTML Webpage
+
+![Image](./src/teamGenIm.JPG)
+
 ## Code Snippet
 The code snippet below shows how each card is generated. The one displayed is for the Engineer. Therefore, the data gathered from the command line is dynamically inputted into each respective area of the
 html card. 

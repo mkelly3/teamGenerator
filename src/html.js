@@ -27,7 +27,7 @@ const generateHTML = (data) => {
         <div class="card-body">
             <ul class="list-group">
                 <li class="list-group-item">ID: ${engineer.getId()}</li>
-                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getName()}</a></li>
+                <li class="list-group-item">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></li>
                 <li class="list-group-item">GitHub: <a href="https://github.com/${engineer.getGitHub()}" target="_blank" rel="noopener noreferrer">${engineer.getGitHub()}</a></li>
             </ul>
         </div>
@@ -73,10 +73,10 @@ htmlCards.push(
       .join("")
   );
 
-  return html.join("");
+  return htmlCards.join("");
 };
 
-modele.exports = (data) => {
+module.exports = (data) => {
     return `
     <!DOCTYPE html>
     <html lang="en">

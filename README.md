@@ -1,7 +1,7 @@
 # Team Generator
 
 ## Description
-This application has the user enter information into the command line to generate an HTML webpage. The User first enters information about themsleves and then they are able to enter information about others. The roles being asked for this team as manager, intern and engineer all include a name, employee id and email and an additional question that is specific for each position. Once, the user clicks that they are done entering team members then the webpage is dynamiccaly generated.
+This application has the user enter information into the command line to generate an HTML webpage. The User first enters information about themsleves and then they are able to enter information about others. The roles being asked for this team as manager, intern and engineer all include a name, employee id and email and an additional question that is specific for each position. Once, the user clicks that they are done entering team members then the webpage is dynamically generated.
 
 ## Table of Contents
 - [Description](#description)
